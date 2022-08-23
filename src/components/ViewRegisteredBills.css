@@ -1,0 +1,13 @@
+.form{
+    height: 300px;
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 200px;
+    background-color: black;
+    color:white;
+    margin-right:7000px;
+    margin-left:10px;
+    padding-right: 150px;
+    padding-left: 150px;
+    width: 200px;
+  }
