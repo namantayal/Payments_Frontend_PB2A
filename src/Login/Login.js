@@ -22,7 +22,7 @@ export default function Login() {
   return (
     <div className="login">
       <h2 className="MainLabel">Payment Portal</h2>
-      <Form onSubmit={()=>navigate('/dashboardM')}>
+      <Form className="form" onSubmit={()=>navigate('/dashboardM')}>
         <Form.Group size="lg" controlId="email">
           <Form.Label className="labelEmail">Email</Form.Label>
           <Form.Control
@@ -42,7 +42,7 @@ export default function Login() {
           />
         </Form.Group>
 
-        <Button block size="lg" type="submit" disabled={!validateForm()} >
+        <Button className="button" block size="lg" type="submit" disabled={!validateForm()} >
           Login
         </Button>
 
