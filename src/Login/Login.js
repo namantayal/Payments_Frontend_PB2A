@@ -15,9 +15,11 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // will use in authentication after API is ready
+
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
 
   return (
     <div className="login">

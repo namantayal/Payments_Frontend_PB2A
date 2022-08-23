@@ -1,17 +1,18 @@
 .label {
     text-align: center;
     padding-right: 113px;
-  }
+}
 
 .labelEmail {
     text-align: center;
     padding-right: 153px;
-  } 
+} 
 
 .MainLabel{
   padding-bottom:50px;
   padding-left: 370px;
 }
+
 .login{ 
   background-color: white;
   min-height: 100vh;
@@ -24,8 +25,7 @@
 }
 
 .button{
-
-margin-top:20px;
+  margin-top:20px;
 }
 
 .form{
