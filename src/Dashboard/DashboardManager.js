@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function DashboardUser() {
+export default function DashboardManager() {
 
   return(
+    <h2 className='MenuBar'>Dashboard</h2>
 
-    <h2>Dashboard</h2>
 
   );
 

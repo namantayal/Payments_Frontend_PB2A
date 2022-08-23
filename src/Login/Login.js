@@ -17,12 +17,11 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    
-
   }
 
   return (
-    <div className="Login">
+    <div className="login">
+      <h2 className="MainLabel">Payment Portal</h2>
       <Form onSubmit={()=>navigate('/dashboardM')}>
         <Form.Group size="lg" controlId="email">
           <Form.Label className="labelEmail">Email</Form.Label>
