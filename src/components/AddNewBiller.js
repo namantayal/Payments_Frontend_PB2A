@@ -5,30 +5,49 @@ import "./AddNewBiller.css";
 
 export default function AddNewBiller() {
 
-    const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    const [Cnumber, setCnumber] = useState("");
+  const [autoPayLimit, setAutoPayLimit] = useState("");
+  const [autoPayAllowed, setAutoPayAllowed] = useState(true);
 
   return(
-    <div className='MenuBar'>
-        <h2 className='button'>Add New Biller</h2>
+    <div >
+        <h2 >Add New Biller</h2>
         
         <Form className="form" >
-        <Form.Group size="lg" controlId="email">
-          <Form.Label className="labelEmail">Email</Form.Label>
+        <Form.Group size="lg" controlId="cnumber">
+          <Form.Label className="label">Consumer Number</Form.Label>
           <Form.Control
             autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={Cnumber}
+            onChange={(e) => setCnumber(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Label className="label">Auto Pay Allowed</Form.Label>
+        <div key="radio">
+          <Form.Check 
+          inline
+            type="radio"
+            id="YES"            
+            label="YES"
+            onChange={(e) => setAutoPayAllowed("yes")}
           />
 
-        </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label className="label">Password</Form.Label>
+          <Form.Check
+          inline
+            type="radio"
+            label="NO"
+            id="NO"
+            onChange={(e) => setAutoPayAllowed("no")}
+          />
+        </div>   
+       
+        <Form.Group size="lg" controlId="autoPayLimit">
+          <Form.Label className="label">Auto Pay Limit</Form.Label>
           <Form.Control
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={autoPayLimit}
+            onChange={(e) => setAutoPayLimit(e.target.value)}
           />
         </Form.Group>
         </Form>
