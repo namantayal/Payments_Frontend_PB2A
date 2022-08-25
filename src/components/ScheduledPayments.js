@@ -12,7 +12,7 @@ export default function ScheduledPayments() {
         
         <Form className="form" >
         <Form.Group size="lg" controlId="email">
-          <Form.Label className="labelEmail">biller code</Form.Label>
+          <Form.Label className="code">biller code</Form.Label>
           <Form.Control
             autoFocus
             type="text"

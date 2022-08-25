@@ -18,7 +18,7 @@ export default function ParticularBiller() {
         
         <Form className="form" >
         <Form.Group size="lg" controlId="code">
-          <Form.Label className="labelEmail">Biller Code</Form.Label>
+          <Form.Label className="code">Biller Code</Form.Label>
           <Form.Control
             autoFocus
             type="text"
