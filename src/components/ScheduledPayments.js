@@ -5,7 +5,6 @@ import "./ScheduledPayments.css";
 export default function ScheduledPayments() {
 
     const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   return(
     <div className='MenuBar'>
@@ -13,23 +12,14 @@ export default function ScheduledPayments() {
         
         <Form className="form" >
         <Form.Group size="lg" controlId="email">
-          <Form.Label className="labelEmail">Email</Form.Label>
+          <Form.Label className="labelEmail">biller code</Form.Label>
           <Form.Control
             autoFocus
-            type="email"
+            type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
-        </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label className="label">Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+           </Form.Group>       
         </Form>
     </div>
 

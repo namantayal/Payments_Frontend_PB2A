@@ -2,34 +2,35 @@ import React,{useState} from 'react';
 import Form from "react-bootstrap/Form";
 import "./ParticularBiller.css";
 
+import Button from "react-bootstrap/Button";
+
 export default function ParticularBiller() {
 
-    const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+    const [code, setCode] = useState("");
+
+    function validateForm() {
+      return code.length > 0 ;
+    }
 
   return(
     <div className='MenuBar'>
         <h2 className='button'>View payments done for particular biller</h2>
         
         <Form className="form" >
-        <Form.Group size="lg" controlId="email">
-          <Form.Label className="labelEmail">Email</Form.Label>
+        <Form.Group size="lg" controlId="code">
+          <Form.Label className="labelEmail">Biller Code</Form.Label>
           <Form.Control
             autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
           />
 
         </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label className="label">Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+        <Button className="button" block size="lg" type="submit" disabled={!validateForm()} >
+          View Payments
+        </Button>
+        
         </Form>
     </div>
 

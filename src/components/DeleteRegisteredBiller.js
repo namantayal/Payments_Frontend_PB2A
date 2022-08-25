@@ -3,8 +3,14 @@ import React,{useState} from 'react';
 import Form from "react-bootstrap/Form";
 import "./DeleteRegisteredBiller.css";
 
+import Button from "react-bootstrap/Button";
+
 export default function DeleteRegisteredBiller() {
     const [code, setCode] = useState("");
+
+    function validateForm() {
+      return code.length > 0 ;
+    }
   return(
     <div className='MenuBar'>
         <h2 className='button'>Delete Registered Biller</h2>
@@ -20,6 +26,9 @@ export default function DeleteRegisteredBiller() {
           />
 
         </Form.Group>
+        <Button className="button" block size="lg" type="submit" disabled={!validateForm()} >
+          Delete Biller
+        </Button>
         </Form>
     </div>
 
