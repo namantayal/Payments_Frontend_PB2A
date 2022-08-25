@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import bg from "../Login/bg-login.png";
 //import bg from "./src/Login/image";
 
 export default function Login() {
@@ -23,8 +24,8 @@ export default function Login() {
   // }
 
   return (
-    //<div style={{ backgroundImage: `url(${bg})` }}>
-    <div className="login">
+    <div className='main' style={{ backgroundImage: `url(${bg})` }}>
+    <div className="login" >
       <h2 className="MainLabel">Payment Portal</h2>
       <Form className="form" onSubmit={()=>navigate('/dashboardM')}>
         <Form.Group size="lg" controlId="email">
@@ -52,7 +53,7 @@ export default function Login() {
 
       </Form>
       </div>
-    //</div>
+    </div>
 
   );
 

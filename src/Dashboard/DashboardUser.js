@@ -6,9 +6,14 @@ import ManualPayments from '../components/ManualPayments';
 import ParticularBiller from '../components/ParticularBiller';
 import ScheduledPayments from '../components/ScheduledPayments';
 import ViewRegisteredBills from '../components/ViewRegisteredBills';
+import bg from "../Dashboard/bg.png";
 
 export default function DashboardUser() {
   const [id, setID] = useState("");
+  const mystyle={
+    backgroundImage: `url(${bg})`,
+
+  }
   return(
 <div>
  <div className='MenuBar'>
@@ -21,14 +26,15 @@ export default function DashboardUser() {
     <button onClick={()=>setID(6)} className='button'>View Payments done for a particular biller </button>
     <button onClick={()=>setID(7)} className='button'>Export file to csv</button>
 </div>
- {id===4&&<ScheduledPayments/>} 
- {id===2&&<ViewRegisteredBills/>}
-{id===3&&<AddNewBiller/>}
-{id===1&&<DeleteRegisteredBiller/>}
-{id===5&&<ManualPayments/>}
-{id===6&&<ParticularBiller/>}  
-{id===7&&<ExportCSV/>}
-
+<div style={mystyle}>
+    {id===4&&<ScheduledPayments/>} 
+    {id===2&&<ViewRegisteredBills/>}
+    {id===3&&<AddNewBiller/>}
+    {id===1&&<DeleteRegisteredBiller/>}
+    {id===5&&<ManualPayments/>}
+    {id===6&&<ParticularBiller/>}  
+    {id===7&&<ExportCSV/>}
+    </div>
 </div>
 
   );

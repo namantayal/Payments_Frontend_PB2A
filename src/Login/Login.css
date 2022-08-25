@@ -10,19 +10,10 @@
 } 
 
 .MainLabel{
-  padding-bottom:50px;
-  padding-left: 370px;
-}
-
-.login{ 
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  padding-bottom:30px;
+  padding-left:135px;
+  color: white;
+  font-size: xx-large;
 }
 
 .button{
@@ -33,10 +24,19 @@
   height: 300px;
   border-style: solid;
   border-width: 2px;
-  padding-top: 200px;
+  padding-top: 100px;
   background-color: black;
   color:white;
   margin-left:400px;
   padding-right: 100px;
   padding-left: 100px;
+}
+
+.login{
+  margin-left: 700px;
+
+}
+
+.main{
+  height: 100vh;
 }
