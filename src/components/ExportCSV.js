@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
 import Form from "react-bootstrap/Form";
 import "./ExportCSV.css"
+import Button from "react-bootstrap/Button";
 
 export default function ExportCSV() {
 
     const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   return(
     <div className='MenuBar'>
         <h2 className='button'>Export CSV</h2>
@@ -21,14 +21,9 @@ export default function ExportCSV() {
           />
 
         </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label className="label">Password</Form.Label>
-          <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+        <Button className="button" block size="lg" type="submit"  >
+          export csv files
+        </Button>
         </Form>
     </div>
 

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Form from "react-bootstrap/Form";
 import "./ScheduledPayments.css";
+import Button from "react-bootstrap/Button";
 
 export default function ScheduledPayments() {
 
@@ -19,7 +20,11 @@ export default function ScheduledPayments() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-           </Form.Group>       
+           </Form.Group> 
+
+           <Button className="button" block size="lg" type="submit"  >
+          View scheduled payments
+        </Button>      
         </Form>
     </div>
 
